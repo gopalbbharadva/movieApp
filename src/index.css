@@ -1,10 +1,43 @@
-.movie-container{
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.root{
   background-color: #4F46E5;
   display: flex;
+  flex-direction: column;
+}
+
+header{ 
+  height: 4rem;
+  background-color: #3730A3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.search{
+  color: white ;
+  border: 2px solid #312E81;
+  background-color: transparent;
+  border-radius: 10px;
+  margin-right: 1rem;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  font-size: large;
+}
+.search:focus{
+  outline: none;
+}
+
+.movie-container{
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .movie{
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
   margin: 1rem;
   width: 300px;
   background-color: #3730A3;
@@ -23,4 +56,23 @@
 }
 .movie img{
   max-width: 100%;
+}
+
+.movie-overview{
+  font-family: 'Lato', sans-serif;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.movie:hover .movie-overview{
+  transform: translateY(0%);
 }

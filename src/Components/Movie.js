@@ -9,7 +9,11 @@ const Movie=({title,overview,poster_path,vote_average})=>{
             <img src={imagepath+poster_path} alt={title}/>
             <div className="movie-info">
                 <h3>{title}</h3>
-                <small>{vote_average}</small>
+                <span>{vote_average}</span>
+            </div>
+            <div className="movie-overview">
+                <h3>Overview</h3>
+                <p>{overview}</p>
             </div>
         </div>
     )
