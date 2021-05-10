@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Color from "./Components/Colorpicker";
 import Movie from "./Components/Movie";
 
 const movie_api =
@@ -36,7 +37,8 @@ function App() {
   };
   return (
     <div>
-      <header>
+      <Color/>
+       {/* <header>
         <form onSubmit={formHandler}>
           <input
             onChange={searchInputHandler}
@@ -51,7 +53,7 @@ function App() {
         {movies.map((item) => {
           return <Movie key={item.id} {...item} />;
         })}
-      </div>
+      </div> */}
     </div>
   );
 }
