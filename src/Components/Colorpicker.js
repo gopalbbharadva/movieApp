@@ -29,7 +29,8 @@ class Color extends React.Component {
         />
         {console.log(this.state.bg)}
         <button onClick={this.btnHandler}>Submit</button>
-        {this.state.flag ? <Dummy /> : null}
+        {/* {this.state.flag ? <Dummy /> : null} */}
+        
       </div>
     );
   }
