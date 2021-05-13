@@ -58,7 +58,7 @@ function App() {
         </div>
       ) : (
         <div>
-          <header>
+          <header style={{backgroundColor:`${color}`}}>
             <form onSubmit={formHandler}>
               <input
                 onChange={searchInputHandler}

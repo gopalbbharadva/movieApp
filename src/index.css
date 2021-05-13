@@ -1,27 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
-.root{
+:root {
+  --primary-color: black;
+}
+
+.root {
   height: 100%;
   width: 100%;
   /* background-color: #4F46E5; */
   display: flex;
   flex-direction: column;
 }
-body{
+body {
   margin: 0;
 }
 
-header{ 
+header {
   height: 4rem;
-  background-color: #3730A3;
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.search{
-  color: white ;
-  border: 2px solid #312E81;
+.search {
+  color: white;
+  border: 2px solid #ffff;
   background-color: transparent;
   border-radius: 10px;
   margin-right: 1rem;
@@ -29,27 +33,28 @@ header{
   padding: 0.5rem 1rem;
   font-size: large;
 }
-.search:focus{
+.search:focus {
   outline: none;
 }
 
-.movie-container{ 
+.movie-container {
+  background-color: var(--primary-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.movie{
+.movie {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
   margin: 1rem;
   max-height: 100%;
   width: 250px;
-  background-color: #3730A3;
+  background-color: #3730a3;
   border-radius: 10px;
 }
-.movie-info{
+.movie-info {
   color: white;
   padding: 0rem 1rem;
   display: flex;
@@ -57,19 +62,26 @@ header{
   justify-content: space-between;
 }
 
-.movie-info h3{
+.movie-info h3 {
   margin: 0;
   padding: 1rem;
 }
-.movie img{
+
+.favoritesBtn {
+  cursor: pointer;
+  font-size: 2rem;
+  color:  #3B82F6;
+}
+
+.movie img {
   height: 400px;
   object-fit: cover;
   width: 100%;
 }
 
-.movie-overview{
+.movie-overview {
   max-height: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
@@ -83,24 +95,24 @@ header{
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out;
 }
-.movie:hover .movie-overview{
+.movie:hover .movie-overview {
   transform: translateY(0%);
 }
 
-.movie-info span{
-    padding:0.3rem 0.3rem;
-    font-weight: bold;
+.movie-info span {
+  padding: 0.3rem 0.3rem;
+  font-weight: bold;
 }
 
-.tag{
-  background-color: #312E81;
+.tag {
+  background-color: #312e81;
 }
-.tag.green{
-  color: #10B981;
+.tag.green {
+  color: #10b981;
 }
-.tag.orange{
-  color: #F59E0B;
+.tag.orange {
+  color: #f59e0b;
 }
-.tag.red{
-  color: #EF4444;
+.tag.red {
+  color: #ef4444;
 }
