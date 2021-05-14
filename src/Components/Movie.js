@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
-import Favourite from "./Favourite";
 
 const imagepath = "https://image.tmdb.org/t/p/w1280";
 

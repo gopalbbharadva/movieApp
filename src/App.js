@@ -15,7 +15,7 @@ function App() {
   let [color, setColor] = useState("");
   const [flag, flagHandler] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [addFavourite,favouriteMovieHandler]=useState([]);
+  const [addFavourite, favouriteMovieHandler] = useState([]);
 
   useEffect(() => {
     getMoviesData(movie_api);
@@ -51,18 +51,24 @@ function App() {
     else flagHandler(false);
   };
 
-  const favouriteMovie=(movie)=>{
-      const currentMovie=[...addFavourite,movie];
-      favouriteMovieHandler(currentMovie);
-  }
+  const favouriteMovie = (movie) => {
+    const currentMovie = [...addFavourite, movie];
+    favouriteMovieHandler(currentMovie);
+  };
+
+  const deleteFavourite=(index)=>{
+      const tempMovies=addFavourite.slice();  
+      tempMovies.splice(index,1);
+      favouriteMovieHandler(tempMovies);
+  } 
 
   return (
     <div>
       {!flag ? (
         <div
           style={{
-            height:"80vh",
-            flexDirection:"column",
+            height: "80vh",
+            flexDirection: "column",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -84,19 +90,15 @@ function App() {
               />
             </form>
           </header>
-          <div
-            style={{ backgroundColor: `${color}` }}
-          >
+          <div style={{ backgroundColor: `${color}` }}>
             {/* {movies.map((item) => {
               return <Movie key={item.id}  {...item} />;
             })} */}
             <Movie movies={movies} favouriteMovie={favouriteMovie} />
           </div>
-          <div
-            style={{ backgroundColor: `${color}` }}
-          >
+          <div style={{ backgroundColor: `${color}` }}>
             <h1>Favourites</h1>
-            <Movie movies={addFavourite} favouriteMovie={favouriteMovie} />
+            <Favourite movies={addFavourite} favouriteMovie={deleteFavourite} />
           </div>
         </div>
       )}
