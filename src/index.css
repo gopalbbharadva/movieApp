@@ -38,9 +38,8 @@ header {
 }
 
 .movie-container {
-  background-color: var(--primary-color);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
   justify-content: center;
 }
 
