@@ -85,28 +85,24 @@ function App() {
 
   return (
     <Router>
-      <Route exact path="/">
+      <Route exact path="/movieApp">
         <div>
           {!flag ? (
             <div
-              style={{
-                height: "80vh",
-                flexDirection: "column",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className="color-container"
             >
-              <SketchPicker color={color} onChangeComplete={colorHandler} />
-              <button onClick={btnHandler}>Submit</button>
+              <p>Choose your favourite color</p>
+              <SketchPicker style={{width:"100%"}} color={color} onChangeComplete={colorHandler} />
+              <button className="colorBtn" onClick={btnHandler}>Submit</button>
             </div>
           ) : (
             <div>
               <header style={{ backgroundColor: `${color}` }}>
                 <NavLink
-                  // style={{ color: `${color} === "white"?'black':'white'` }}
+                  style={{ color:`${color==='#ffffff'?'black':'white'}`}}
                   exact
                   to="/fv"
+                  // style={{color:"white"}}
                 >
                   Favourites
                 </NavLink>
