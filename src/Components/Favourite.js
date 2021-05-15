@@ -32,8 +32,8 @@ const Favourite = (props) => {
             </div>
             <div className="movie-overview">
               {/* <label style={{ display: setTooltip(), color: "#34D399" }}>
-                Add to Favourites
-              </label> */}
+              Add to Favourites
+            </label> */}
               <div
                 style={{
                   display: "flex",
@@ -43,9 +43,13 @@ const Favourite = (props) => {
               >
                 <h3>Overview</h3>
                 <FontAwesomeIcon
-                onClick={()=>props.favouriteMovie(index)}
-                style={{cursor:"pointer",fontSize:"1.6rem",color:"red"}}
-                //   className="favoritesBtn"
+                  onClick={() => props.favouriteMovie(index)}
+                  style={{
+                    cursor: "pointer",
+                    fontSize: "1.6rem",
+                    color: "red",
+                  }}
+                  //   className="favoritesBtn"
                   icon={faTrash}
                 ></FontAwesomeIcon>
               </div>
